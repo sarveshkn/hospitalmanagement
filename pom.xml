@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>hospitals</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project for Spring Boot. It has Swagger description file.</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -57,12 +57,12 @@
 		<dependency>
 			<groupId>javax.ws.rs</groupId>
 			<artifactId>javax.ws.rs-api</artifactId>
-			<scope>provided</scope>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
-			<scope>provided</scope>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>joda-time</groupId>
@@ -78,43 +78,51 @@
 		<dependency>
 			<groupId>javax.ws.rs</groupId>
 			<artifactId>javax.ws.rs-api</artifactId>
-			<scope>provided</scope>
+			<scope>compile</scope>
+			<version>${jaxrs-api.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
-			<scope>provided</scope>
+			<scope>compile</scope>
+			<version>${javax-validation-api.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<scope>provided</scope>
+			<scope>compile</scope>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.jaxrs</groupId>
 			<artifactId>jackson-jaxrs-json-provider</artifactId>
-			<scope>provided</scope>
+			<scope>compile</scope>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.datatype</groupId>
 			<artifactId>jackson-datatype-joda</artifactId>
-			<scope>provided</scope>
+			<scope>compile</scope>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
-			<scope>provided</scope>
+			<scope>compile</scope>
+			<version>${jaxrs-api.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<scope>provided</scope>
+			<scope>compile</scope>
+			<version>${commons-lang3.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-collections4</artifactId>
-			<scope>provided</scope>
+			<scope>compile</scope>
+			<version>4.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
@@ -130,13 +138,14 @@
 		<dependency>
 			<groupId>io.swagger</groupId>
 			<artifactId>swagger-annotations</artifactId>
-			<scope>provided</scope>
+			<scope>compile</scope>
+			<version>1.5.7</version>
 		</dependency>
 		<dependency>
 			<groupId>io.swagger</groupId>
 			<artifactId>swagger-jaxrs</artifactId>
 			<version>1.5.7</version>
-			<scope>provided</scope>
+			<scope>compile</scope>
 		</dependency>
 		<!-- Testing dependencies -->
 		<dependency>
@@ -165,18 +174,6 @@
 		</dependency>
 
 	</dependencies>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.practise.microservice</groupId>
-				<artifactId>parent</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 
 	<build>
 		<plugins>
